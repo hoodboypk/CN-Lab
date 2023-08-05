@@ -1,0 +1,20 @@
+Server Side:
+
+Create a server socket to listen for incoming connections.
+Wait for a client to initiate a connection request.
+Accept the incoming connection, creating a new socket to communicate with the client.
+Receive the SYN segment from the client.
+Send a SYN-ACK segment back to the client with its own initial sequence number (ISN).
+Receive the ACK segment from the client, acknowledging the server's SYN.
+
+Client Side:
+
+Create a client socket and specify the server's IP address and port number.
+Send a SYN segment to the server, indicating the client's initial sequence number (ISN).
+Receive the SYN-ACK segment from the server, containing the server's ISN.
+Send an ACK segment back to the server, acknowledging the server's SYN-ACK and completing the handshake.
+
+Data Transfer:
+
+After the handshake is completed, both the client and server can send and receive data over the established connection.
+Data is transmitted using TCP segments with sequence numbers to ensure reliable and ordered delivery.
