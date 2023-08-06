@@ -1,0 +1,7 @@
+The server creates a DatagramSocket to listen on a specified port.
+It listens for incoming datagrams in an infinite loop using serverSocket.receive(receivePacket).
+When a datagram is received, it extracts the message, sends it back to the client as a new datagram using serverSocket.send(sendPacket).
+The client creates a DatagramSocket to send and receive datagrams.
+It takes input from the user to send messages to the server.
+The client sends the message to the server as a datagram using clientSocket.send(sendPacket).
+It waits for the echoed message from the server using clientSocket.receive(receivePacket) and prints it to the console.
