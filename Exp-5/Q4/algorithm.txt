@@ -1,0 +1,32 @@
+Server Algorithm:
+
+Create a server socket on a specified port.
+Listen for incoming connections from clients in an infinite loop.
+When a client connection is accepted:
+a. Print a message indicating the new connection.
+b. Create a new thread (client handler) to handle communication with the client.
+c. Start the client handler thread.
+Client Handler Algorithm:
+
+Accept the client socket passed from the server.
+Create an output stream (e.g., PrintWriter) to send data to the client.
+In an infinite loop:
+a. Get the current date and time.
+b. Send the date and time to the client.
+c. Sleep for a short interval (e.g., 1 second).
+If an exception occurs (e.g., IO or InterruptedException):
+a. Handle the exception (e.g., print an error message).
+Close the client socket when the loop exits.
+Client Algorithm (Multiple Clients):
+
+Define the server's IP address and port.
+Define the number of clients to connect (NUM_CLIENTS).
+For each client (loop from 1 to NUM_CLIENTS):
+a. Create a new client thread:
+i. Inside the client thread:
+- Create a socket and connect to the server.
+- Create an input stream (e.g., BufferedReader) to receive data from the server.
+- Read and print the date and time information from the server.
+- Handle any exceptions that occur (e.g., IO or network errors).
+- Close the socket when done.
+ii. Start the client thread.
