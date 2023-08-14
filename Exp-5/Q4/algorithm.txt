@@ -6,6 +6,7 @@ When a client connection is accepted:
 a. Print a message indicating the new connection.
 b. Create a new thread (client handler) to handle communication with the client.
 c. Start the client handler thread.
+
 Client Handler Algorithm:
 
 Accept the client socket passed from the server.
@@ -17,6 +18,7 @@ c. Sleep for a short interval (e.g., 1 second).
 If an exception occurs (e.g., IO or InterruptedException):
 a. Handle the exception (e.g., print an error message).
 Close the client socket when the loop exits.
+
 Client Algorithm (Multiple Clients):
 
 Define the server's IP address and port.
