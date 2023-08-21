@@ -1,0 +1,30 @@
+Server (Leo the Lion):
+
+Create a ServerSocket on a designated port.
+Wait for a client connection using serverSocket.accept().
+Set up input and output streams for communication with the client.
+Set up a separate input stream to read from the server console.
+Enter a loop:
+a. Prompt for input with "Leo: ".
+b. Read a message from the server console.
+c. Send the message to the client using the output stream.
+d. If the message is "bye", break the loop.
+e. Receive a message from the client using the input stream.
+f. Print the received message as "Miko: ".
+g. If the received message is "bye", break the loop.
+Close the client socket and the server socket.
+
+Client (Miko the Monkey):
+
+Create a Socket and connect to the server.
+Set up input and output streams for communication with the server.
+Set up a separate input stream to read from the client console.
+Enter a loop:
+a. Receive a message from the server using the input stream.
+b. Print the received message as "Leo: ".
+c. If the received message is "bye", break the loop.
+d. Prompt for input with "Miko: ".
+e. Read a message from the client console.
+f. Send the message to the server using the output stream.
+g. If the message is "bye", break the loop.
+Close the socket.
