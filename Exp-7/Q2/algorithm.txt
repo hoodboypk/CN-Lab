@@ -1,0 +1,24 @@
+Lily Ant Server Algorithm:
+
+Set up a server socket on a specified port.
+Wait for a client to connect to the server socket.
+Upon client connection:
+a. Get the input stream and output stream of the client socket.
+b. Create a thread (receiveThread) for receiving messages from the client.
+c. Start the receiveThread.
+While reading console input:
+a. Read a line from the console.
+b. Write the line (with "Lily Ant: " prefix) to the client output stream.
+Close the server socket and perform cleanup when done.
+
+Oliver Ant Client Algorithm:
+
+Create a client socket and connect to the Lily Ant Server's IP and port.
+Upon successful connection:
+a. Get the input stream and output stream of the client socket.
+b. Create a thread (receiveThread) for receiving messages from the server.
+c. Start the receiveThread.
+While reading console input:
+a. Read a line from the console.
+b. Write the line (with "Oliver Ant: " prefix) to the server output stream.
+Close the client socket and perform cleanup when done.
