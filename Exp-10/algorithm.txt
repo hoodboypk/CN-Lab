@@ -1,0 +1,43 @@
+Import necessary libraries:
+
+Import the required Java libraries, including BufferedReader, IOException, and Scanner.
+
+Define the main method:
+
+Create the main method, which is the entry point of the program.
+Create a Scanner object to read user input.
+Prompt the user to enter the target IP address.
+Read the target IP address from the user.
+Call the getMacAddress function:
+
+
+Pass the target IP address entered by the user as an argument to the getMacAddress function.
+Store the result in a variable (macAddress).
+
+Display the result:
+
+Check if the macAddress variable is not null.
+If it's not null, display the MAC address along with the target IP address.
+If it's null, display an error message indicating that the MAC address couldn't be found for the target IP address.
+
+Define the getMacAddress function:
+
+Create the getMacAddress function, which takes an IP address as input.
+Inside the function:
+Use ProcessBuilder to execute the "arp -a" command with the provided IP address.
+Redirect the error stream to the input stream.
+Start the process.
+Create a BufferedReader to read the process's input stream.
+Iterate through the lines of output from the process.
+For each line:
+Check if it contains the target IP address.
+If it does, use a regular expression to extract the MAC address from the line.
+Return the extracted MAC address if found.
+After processing all lines, wait for the process to complete and retrieve its exit code.
+If the exit code is not zero, display an error message.
+Handle any potential exceptions during this process.
+
+End the program:
+
+Close the Scanner (if it was opened).
+The program execution is complete.
